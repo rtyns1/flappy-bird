@@ -13,18 +13,18 @@ class Pipe:
         self.bottom_rect = pygame.Rect(x, self.gap_y + PIPE_GAP,PIPE_WIDTH, GAME_HEIGHT - self.bottom_y)
 
         self.passed = False
+        self.x = x
 
 
     def update(self):
-        self.top_rect.x -= PIPE_SPEED
-        self.bottom_rect.x -= PIPE_SPEED
+        self.x -= PIPE_SPEED
+        self.top_rect.x = self.x
+        self.bottom_rect.x= self.x
 
 
     def draw(self, screen):
         pygame.draw.rect(screen, PIPE_GREEN, self.top_rect)
         pygame.draw.rect(screen, PIPE_GREEN, self.bottom_rect)
-
-
 
     def offscreen(self):
         return self.top_rect.x + PIPE_WIDTH< 0

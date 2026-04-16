@@ -14,16 +14,16 @@ GAME_HEIGHT = 600
 BIRD_X = GAME_WIDTH /2# horizontal starting position of bird
 BIRD_Y = GAME_HEIGHT /2#vertical starting position of bird
 BIRD_SIZE = 30 # means 30*30 pixel square
-GRAVITY = 0.5 #.5 here means the birds downwards speed increases by 0.5 pixel per frame
+GRAVITY = 0.3 #.5 here means the birds downwards speed increases by 0.5 pixel per frame
 #Screen is 600 pixels tall, so .5 is appropriate
-JUMP_STRENGTH= -0.9 #when you flap, birds velocity instantly becomes -9, negative means up
+JUMP_STRENGTH= -7 #when you flap, birds velocity instantly becomes -9, negative means up
 # so u flap, it moves up 9 pixels, then gravity slowly pulls it back down.
 #The jump needs to be strong enough to overcome gravity and actually go up, but not too strong
 #If jump is -9 and gravity is 0.5, the bird goes up about 18 frames before starting to fall again
 
 PIPE_WIDTH= 80
 PIPE_GAP = 200 # 200 pixels of empty space btwn top pipe and bottom pipe
-PIPE_SPACING = 300 # one pipe apart to the next is 300 pixels, meaning u can only see one pipe pair on screen at a time.
+PIPE_SPACING = 250 # one pipe apart to the next is 300 pixels, meaning u can only see one pipe pair on screen at a time.
 PIPE_SPEED = 3 # moves left 3 pixels per frame, at 6- fps that is 180 pixels per second.
 #Screen is 400 pixels wide so pipe takes about 2.2 seconds to travel from right to left edge.
 
