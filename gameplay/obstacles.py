@@ -2,7 +2,6 @@ import pygame
 from settings import *
 import random
 
-
 class Pipe:
     def __init__(self, x):
         min_gap = 100
@@ -15,12 +14,10 @@ class Pipe:
         self.passed = False
         self.x = x
 
-
     def update(self):
         self.x -= PIPE_SPEED
         self.top_rect.x = self.x
         self.bottom_rect.x= self.x
-
 
     def draw(self, screen):
         pygame.draw.rect(screen, PIPE_GREEN, self.top_rect)
